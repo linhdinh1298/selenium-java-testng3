@@ -7,6 +7,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class Topic_00_Template {
 
     // 1-Setup: OS/Browser/Web/Page/Data/Variable/Object/...
@@ -15,7 +17,8 @@ public class Topic_00_Template {
     @BeforeClass
     public void initialBrowser() {
         driver = new FirefoxDriver();
-        driver.get("https://www.facebook.com/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().window().maximize();
     }
     // 2-Action/Execute: Element/input data/verify/...
     @Test
@@ -23,7 +26,7 @@ public class Topic_00_Template {
 
     }
     @Test
-    public void TC_02_Regist(){
+    public void TC_02_(){
 
     }
     // 3-Clean: Delete data test/ account/ close browser/...
