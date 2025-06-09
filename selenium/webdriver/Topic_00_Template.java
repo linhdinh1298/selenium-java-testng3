@@ -17,8 +17,8 @@ public class Topic_00_Template {
     @BeforeClass
     public void initialBrowser() {
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
     // 2-Action/Execute: Element/input data/verify/...
     @Test
