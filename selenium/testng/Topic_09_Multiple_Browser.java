@@ -36,7 +36,7 @@ public class Topic_09_Multiple_Browser {
         } else {
             throw new RuntimeException("Browser name is not valid !");
         }
-        // Cách 2: Dùng Switch-
+        // Cách 2: Dùng Switch-case
         switch (browserName){
             case "Chrome":
                 driver = new ChromeDriver();
